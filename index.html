@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cipher Lab — encoding, radix &amp; cipher workbench</title>
+  <meta name="description" content="Client-side workbench for 65 encodings, radix conversions, classical ciphers and hashes.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="lab">
+    <main class="workspace">
+      <header class="bar">
+        <div class="bar-left">
+          <span class="pill" id="algoPill"><span class="pill-key">algorithm:</span> <span id="algoPillName">Base2 (Binary)</span></span>
+          <label class="param" id="paramWrap" hidden>
+            <span class="param-label" id="paramLabel">key</span>
+            <input id="paramInput" class="param-input" type="text" spellcheck="false" autocomplete="off">
+          </label>
+        </div>
+        <div class="bar-right">
+          <button type="button" class="btn" id="swapBtn" title="move output to input and flip mode">⇄ SWAP</button>
+          <div class="seg" role="radiogroup" aria-label="mode">
+            <button type="button" class="seg-btn is-active" role="radio" aria-checked="true" data-mode="encode">encode</button>
+            <button type="button" class="seg-btn" role="radio" aria-checked="false" data-mode="decode">decode</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="editor">
+        <div class="pane">
+          <div class="pane-head">
+            <span class="label">INPUT</span>
+            <span class="label count" id="inCount">0 CHARS</span>
+          </div>
+          <textarea id="input" class="area" spellcheck="false" autocomplete="off" aria-label="input">Hello World</textarea>
+        </div>
+        <div class="pane">
+          <div class="pane-head">
+            <span class="label">OUTPUT</span>
+            <div class="pane-tools">
+              <span class="label count" id="outCount">0 CHARS</span>
+              <button type="button" class="btn" id="copyBtn">COPY OUTPUT</button>
+            </div>
+          </div>
+          <textarea id="output" class="area" readonly spellcheck="false" aria-label="output"></textarea>
+        </div>
+      </section>
+
+      <section class="info">
+        <div class="label" id="infoTitle">ABOUT · BASE2 (BINARY)</div>
+        <p class="info-text" id="infoText"></p>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <div class="side-head">
+        <div class="label" id="algoCount">ALGORITHMS · 65</div>
+        <input id="search" class="search" type="text" placeholder="search..." spellcheck="false" autocomplete="off" aria-label="filter algorithms">
+      </div>
+      <nav class="list" id="list" aria-label="algorithms"></nav>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Cipher Lab
 
+https://cipher.coolkta.me/
+
 Type on the left. Instant output on the right. **Cipher Lab** is a zero-dependency, client-side encoding, radix conversion, classical cipher, and hashing workbench built in three files (`index.html`, `style.css`, and `app.js`). 
 
 Everything runs strictly in local browser memory—no servers, no analytics, no external fonts, and no network requests. Nothing leaves your machine.
